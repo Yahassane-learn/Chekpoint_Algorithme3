@@ -1,0 +1,28 @@
+ALGORITHM dot_product_orthogonal
+VAR
+    w1,w2 : ARRAY_OF FLOAT[1..100];
+    ps : FLOAT ;
+    n,i : INTEGER ;
+BEGIN
+    PROCEDURE dot_product(VAR v1,v2 :ARRAY_OF FLOAT )
+    VAR
+        v1 ,v2 : ARRAY_OF FLOAT[n];   
+    BEGIN
+        //traitement
+        ps := ps + v1[i]*v2[i] ;
+    END
+    // algorithmes to search if  a pairs vectors in n vectors  are orthoganals  
+    Read(n) ; // length of elements vectors
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        Read(w1[i]);
+    END_FOR 
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        Read(w2[i]);
+    END_FOR 
+    dot_product(w1,w2) ;
+    IF(ps = 0)THEN 
+        write("The vectors",w1,w2,"are orthogonals" ) ;
+    ELSE 
+        write("The vectors",w1,w2,"are not orthogonals" ) ;
+    END_IF
+END
